@@ -1,0 +1,10 @@
+const fs = require('fs');
+
+function readURLFile(path) {
+    return fs.readFileSync(path, 'utf-8')
+        .split('\n')
+        .map((elt) => {
+            const url = elt.split(',')[1].replace('\r', '');
+            return `http://${url.toLowerCase()}`;
+        });
+}

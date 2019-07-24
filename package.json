@@ -1,0 +1,22 @@
+{
+  "name": "free-crawl",
+  "version": "1.0.0",
+  "description": "crawl sites to check for 404",
+  "main": "free-crawl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattjamesvisuals/free-crawl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattjamesvisuals/free-crawl/issues"
+  },
+  "homepage": "https://github.com/mattjamesvisuals/free-crawl#readme",
+  "dependencies": {
+    "csv-parse": "^4.4.3"
+  }
+}
