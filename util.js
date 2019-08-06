@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const lodash = require('lodash');
 
+
 // This function does the scanning for mixed content errors using puppeteer
 const scanPubFig = async (sites) => {
   const browser = await puppeteer.launch({
@@ -15,17 +16,18 @@ const scanPubFig = async (sites) => {
   let failedRequests = new Map()
   let currentRunSite = '';
   const finalInfo = [];
+  const errorList = [];
 
   // Event fired when a request fired by the page failed
   page.on('requestfailed', request => {
     // Store a reference to that request, we'll need to get more information
     // about Mixed Content errors later
     const failedUrl = request.url();
-    
-      if (failedUrl.includes("pubfig.min.js")) {
-        finalInfo.push(currentRunSite);
-        // console.log( "this is the error" +  failedUrl);
-      }
+
+    if (failedUrl.includes("pubfig.min.js")) {
+      finalInfo.push(currentRunSite);
+      // console.log( "this is the error" +  failedUrl);
+    }
 
     // console.log({
     //   url: request.url(),
@@ -37,7 +39,9 @@ const scanPubFig = async (sites) => {
     // return failedRequests;
   });
   page.on('error', error => {
-    console.log(error);
+    console.log("encountered an error while scanning" + currentRunSite);
+    console.log(error.message);
+    errorList.push(`${currentRunSite}: ${error.message}`);
   });
 
   // If a request failed due to a Mixed Content issue, log it
@@ -48,31 +52,36 @@ const scanPubFig = async (sites) => {
     // console.log(event);
   });
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < sites.length; i++) {
 
     currentRunSite = sites[i];
 
 
-     console.log(`attempting to scan pubfig errors for ${currentRunSite}`)
+    console.log(`attempting to scan pubfig errors for ${currentRunSite}`)
     try {
       const promise = page.waitForNavigation({
         waitUntil: 'networkidle2'
-      });
+      }).catch(e => new Error(e));
       await page.goto(`${currentRunSite}`);
       await promise;
+
     }
     catch (error) {
-      // console.log('error while mixed content scan', url);
-      // console.log(error);
+      console.log('Error with puppeteer while trying to fetch site', currentRunSite);
+      console.log(error.message);
+      errorList.push(`${currentRunSite}: ${error.message}`);
     }
 
 
   }
 
-  console.log(finalInfo);
+  console.log("pubfig errors");
+  console.log(finalInfo.join("\n"));
+  console.log("Scanning Errors");
+  console.log(errorList.join("\n"));
 
 
-  browser.close();
+  await browser.close();
   return sites;
 }
 
