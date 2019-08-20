@@ -21,9 +21,15 @@ function parseCSV(file) {
 }
 // main function thats being executed
 (async () => {
+  const environment = process.env.MY_ENV
+  console.log('environment variable', process.env.MY_ENV)
   const sites = await parseCSV("./urls.csv");
   const updatedSites = sites.map((site) => {
-    return `https://www.${site}`
-  })
+
+    //if qa append ?fsdebug=true else nothing 
+    return `https://www.${site}` + (environment == 'qa' ? '?fsdebug=true' : '');
+
+  });
   util.scanPubFig(updatedSites);
 })();
+

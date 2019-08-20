@@ -15,6 +15,9 @@ const scanPubFig = async (sites) => {
   const finalInfo = [];
   const errorList = [];
 
+  page.setMaxListeners(20);
+
+
   // Event fired when a request fired by the page failed
   page.on('requestfailed', request => {
     // Store a reference to that request
@@ -30,8 +33,8 @@ const scanPubFig = async (sites) => {
     console.log(error.message);
     errorList.push(`${currentRunSite}: ${error.message}`);
   });
-
-  for (let i = 0; i < 10; i++) {
+  
+  for (let i = 0; i < sites.length; i++) {
     currentRunSite = sites[i];
 
     console.log(`attempting to scan pubfig errors for ${currentRunSite}`)
