@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/mattjamesvisuals/free-crawl#readme",
   "dependencies": {
-    "csv-parse": "^4.4.3",
+    "csv-parse": "^4.4.6",
     "lodash": "^4.17.15"
   }
 }
