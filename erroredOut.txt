@@ -1,0 +1,22 @@
+https://www.slashfilm.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.shadowbinders.clownfishtv.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.shadowbinders.clownfishtv.com
+https://www.htmlcolorcodes.com :  net::ERR_CONNECTION_CLOSED at https://www.htmlcolorcodes.com
+https://www.freemahjong.org :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.freemahjong.org
+https://www.mingle2.com :  net::ERR_NAME_NOT_RESOLVED at https://www.mingle2.comhttps://www.chinesenewyear.net :  net::ERR_CONNECTION_CLOSED at https://www.chinesenewyear.net
+https://www.triviahive.com :  net::ERR_CONNECTION_CLOSED at https://www.triviahive.com
+https://www.eastoftheweb.com :  net::ERR_CONNECTION_CLOSED at https://www.eastoftheweb.com
+https://www.manatelugumovies.cc :  net::ERR_CONNECTION_CLOSED at https://www.manatelugumovies.cc
+https://www.automobile-catalog.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.youredm.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.memedroid.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.quanthockey.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.copypastecharacter.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.cheapism.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.ilovemydogsomuch.tv :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.myclassicgarage.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.riddles.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.vectr.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.spectator.org :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.netknots.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.brutal.io :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.warcraftlogs.com :  Navigation Timeout Exceeded: 60000ms exceeded
