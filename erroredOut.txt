@@ -1,22 +1,56 @@
-https://www.slashfilm.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.10fastfingers.com :  net::ERR_NAME_NOT_RESOLVED at https://www.10fastfingers.com
 https://www.shadowbinders.clownfishtv.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.shadowbinders.clownfishtv.com
+https://www.iwastesomuchtime.com :  Navigation Timeout Exceeded: 60000ms exceeded
 https://www.htmlcolorcodes.com :  net::ERR_CONNECTION_CLOSED at https://www.htmlcolorcodes.com
 https://www.freemahjong.org :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.freemahjong.org
-https://www.mingle2.com :  net::ERR_NAME_NOT_RESOLVED at https://www.mingle2.comhttps://www.chinesenewyear.net :  net::ERR_CONNECTION_CLOSED at https://www.chinesenewyear.net
+https://www.mingle2.com :  net::ERR_NAME_NOT_RESOLVED at https://www.mingle2.com
+https://www.chinesenewyear.net :  net::ERR_CONNECTION_CLOSED at https://www.chinesenewyear.net
 https://www.triviahive.com :  net::ERR_CONNECTION_CLOSED at https://www.triviahive.com
 https://www.eastoftheweb.com :  net::ERR_CONNECTION_CLOSED at https://www.eastoftheweb.com
 https://www.manatelugumovies.cc :  net::ERR_CONNECTION_CLOSED at https://www.manatelugumovies.cc
-https://www.automobile-catalog.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.youredm.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.memedroid.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.quanthockey.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.copypastecharacter.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.cheapism.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.ilovemydogsomuch.tv :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.myclassicgarage.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.riddles.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.vectr.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.spectator.org :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.netknots.com :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.brutal.io :  Navigation Timeout Exceeded: 60000ms exceeded
-https://www.warcraftlogs.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.automobile-catalog.com :  net::ERR_CONNECTION_CLOSED at https://www.automobile-catalog.com
+https://www.ilovemydogsomuch.tv :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.ilovemydogsomuch.tv
+https://www.freepacman.org :  net::ERR_CONNECTION_CLOSED at https://www.freepacman.org
+https://www.freemario.org :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.freemario.org
+https://www.freekong.org :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.freekong.org
+https://www.Pixlr App :  net::ERR_NAME_NOT_RESOLVED at https://www.Pixlr App
+https://www.postgradproblems.app :  net::ERR_NAME_NOT_RESOLVED at https://www.postgradproblems.app
+https://www.barstoolapp.com :  net::ERR_CONNECTION_CLOSED at https://www.barstoolapp.com
+https://www.innerstrength.zone :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.yugipedia.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.yugipedia.com
+https://www.gmapapp.com :  net::ERR_CERT_DATE_INVALID at https://www.gmapapp.com
+https://www.fun.shared.com :  net::ERR_NAME_NOT_RESOLVED at https://www.fun.shared.com
+https://www.vintagesynth.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.vintagesynth.com
+https://www.stocktwits iOS App :  net::ERR_NAME_NOT_RESOLVED at https://www.stocktwits iOS App
+https://www.ilovemydogsomuch.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.ilovemydogsomuch.com
+https://www.swinguiosapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.swinguiosapp.com
+https://www.movieranker.com :  Protocol error (Runtime.callFunctionOn): Internal error
+https://www.Freestar Android App :  net::ERR_NAME_NOT_RESOLVED at https://www.Freestar Android App
+https://www.barstoolbetsiosapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.barstoolbetsiosapp.com
+https://www.stocktwits Android App :  net::ERR_NAME_NOT_RESOLVED at https://www.stocktwits Android App
+https://www.swinguandroidapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.swinguandroidapp.com
+https://www.ui-patterns.com :  net::ERR_CONNECTION_CLOSED at https://www.ui-patterns.com
+https://www.boxrec.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.boxrec.com
+https://www.antonymfor.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.antonymfor.com
+https://www.antonymsfor.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.antonymsfor.com
+https://www.antonymswords.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.antonymswords.com
+https://www.spellorg.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.spellorg.com
+https://www.Freestar iOS App :  net::ERR_NAME_NOT_RESOLVED at https://www.Freestar iOS App
+https://www.fun.freebies.com :  net::ERR_NAME_NOT_RESOLVED at https://www.fun.freebies.com
+https://www.azlottery.com :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.azlottery.com
+https://www.worldpopulationreview.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.surviv2.io :  net::ERR_NAME_NOT_RESOLVED at https://www.surviv2.io
+https://www.racedepartment.com :  Navigation Timeout Exceeded: 60000ms exceeded
+https://www.sportingplaymakers.com :  net::ERR_NAME_NOT_RESOLVED at https://www.sportingplaymakers.com
+https://www.Sing King Android App :  net::ERR_NAME_NOT_RESOLVED at https://www.Sing King Android App
+https://www.singkingiosapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.singkingiosapp.com
+https://www.wpsdlocal6iosapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.wpsdlocal6iosapp.com
+https://www.barstoolsportsandroidapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.barstoolsportsandroidapp.com
+https://www.wpsdlocal6androidapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.wpsdlocal6androidapp.com
+https://www.myfamilytree.io :  net::ERR_CERT_COMMON_NAME_INVALID at https://www.myfamilytree.io
+https://www.powerthesaurusiosapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.powerthesaurusiosapp.com
+https://www.geekprank.com :  net::ERR_CERT_INVALID at https://www.geekprank.com
+https://www.mysignsaysandroidapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.mysignsaysandroidapp.com
+https://www.frontpage.pch.com :  net::ERR_NAME_NOT_RESOLVED at https://www.frontpage.pch.com
+https://www.mexicantraindominoesiosapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.mexicantraindominoesiosapp.com
+https://www.mexicantraindominoesandroidapp.com :  net::ERR_NAME_NOT_RESOLVED at https://www.mexicantraindominoesandroidapp.com
