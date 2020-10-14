@@ -4,9 +4,11 @@ const puppeteer = require('puppeteer');
 const scanPubFig = async (sites) => {
 
   let currentRunSite = '';
-  const noTcfApi = [];
+  const noTcfCmp = [];
   const hasTcfApi = [];
+  const hasCmp = [];
   const errorList = [];
+
 
   for (let i = 0; i < sites.length; i++) {
     const browser = await puppeteer.launch({
@@ -28,13 +30,23 @@ const scanPubFig = async (sites) => {
       await page.goto(`${currentRunSite}`);
       await promise;
       result = await page.evaluate(() => {
-        return typeof __tcfapi;
+        const tcfExists = typeof __tcfapi === 'function';
+        const cmpExists = typeof __cmp === 'function';
+        return {
+          tcfExists,
+          cmpExists
+        }
+
       });
-      if (result === 'undefined') {
-        noTcfApi.push('does not have TcfApi ' + currentRunSite);
+      console.log(result);
+      if (result.tcfExists) {
+        hasTcfApi.push(currentRunSite);
       }
-      else if (result === 'function') {
-        hasTcfApi.push('has Tcfapi ' + currentRunSite);
+      else if (result.cmpExists) {
+        hasCmp.push(currentRunSite);
+      }
+      else if (!result.tcfExists && !result.cmpExists) {
+        noTcfCmp.push(currentRunSite)
       }
       else {
         console.log(currentRunSite + ' site timed out')
@@ -45,17 +57,24 @@ const scanPubFig = async (sites) => {
       errorList.push(`${currentRunSite} :  ${error.message}`);
       console.log('Error with puppeteer while trying to fetch site ', currentRunSite);
       console.log(error.message);
+      await browser.close();
     }
 
   }
 
   console.log('scan complete!')
+  console.log('*** HAS TCFAPI ***');
   console.log(hasTcfApi.join('\n'));
-  console.log(noTcfApi.join('\n'));
-  console.log(errorList.join('\n'))
-
+  console.log('\n\n\n*** HAS CMP ***');
+  console.log(hasCmp.join('\n'));
+  console.log('\n\n\n*** NEITHER ***');
+  console.log(noTcfCmp.join('\n'));
+  console.log('\n\n\n*** ERRORED ***');
+  console.log(errorList.join('\n'));
+  process.exit(1);
   return sites;
 }
+
 
 module.exports = {
   scanPubFig

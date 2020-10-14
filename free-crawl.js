@@ -23,7 +23,7 @@ function parseCSV(file) {
 (async () => {
   const environment = process.env.MY_ENV
   console.log('environment variable', process.env.MY_ENV)
-  const sites = await parseCSV("./erroredurls.csv");
+  const sites = await parseCSV("./urls.csv");
   const updatedSites = sites.map((site) => {
 
     //if qa append ?fsdebug=true else nothing 
