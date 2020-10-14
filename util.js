@@ -1,40 +1,25 @@
 const puppeteer = require('puppeteer');
 
-// This function does the scanning for errors using puppeteer
-const scanPubFig = async (sites) => {
-  const browser = await puppeteer.launch({
-    headless: true
-  })
-  const page = await browser.newPage()
 
-  // Get a handle for the client used by the page object to communicate with
-  // the browser through the DevTools protocol
-  const devToolsClient = page._client
+const scanPubFig = async (sites) => {
 
   let currentRunSite = '';
-  const finalInfo = [];
+  const noTcfCmp = [];
+  const hasTcfApi = [];
+  const hasCmp = [];
   const errorList = [];
 
-  page.setMaxListeners(20);
 
-
-  // Event fired when a request fired by the page failed
-  page.on('requestfailed', request => {
-    // Store a reference to that request
-    const failedUrl = request.url();
-
-    if (failedUrl.includes("pubfig.min.js")) {
-      finalInfo.push(currentRunSite);
-    }
-  });
-
-  page.on('error', error => {
-    console.log("encountered an error while scanning" + currentRunSite);
-    console.log(error.message);
-    errorList.push(`${currentRunSite}: ${error.message}`);
-  });
-  
   for (let i = 0; i < sites.length; i++) {
+    const browser = await puppeteer.launch({
+      headless: true
+    })
+    const page = await browser.newPage();
+    page.setDefaultNavigationTimeout(60000);
+    page.setMaxListeners(10);
+    // Get a handle for the client used by the page object to communicate with
+    // the browser through the DevTools protocol
+    const devToolsClient = page._client
     currentRunSite = sites[i];
 
     console.log(`attempting to scan pubfig errors for ${currentRunSite}`)
@@ -44,22 +29,52 @@ const scanPubFig = async (sites) => {
       }).catch(e => new Error(e));
       await page.goto(`${currentRunSite}`);
       await promise;
+      result = await page.evaluate(() => {
+        const tcfExists = typeof __tcfapi === 'function';
+        const cmpExists = typeof __cmp === 'function';
+        return {
+          tcfExists,
+          cmpExists
+        }
+
+      });
+      console.log(result);
+      if (result.tcfExists) {
+        hasTcfApi.push(currentRunSite);
+      }
+      else if (result.cmpExists) {
+        hasCmp.push(currentRunSite);
+      }
+      else if (!result.tcfExists && !result.cmpExists) {
+        noTcfCmp.push(currentRunSite)
+      }
+      else {
+        console.log(currentRunSite + ' site timed out')
+      }
+      await browser.close();
     }
     catch (error) {
-      console.log('Error with puppeteer while trying to fetch site', currentRunSite);
+      errorList.push(`${currentRunSite} :  ${error.message}`);
+      console.log('Error with puppeteer while trying to fetch site ', currentRunSite);
       console.log(error.message);
-      errorList.push(`${currentRunSite}: ${error.message}`);
+      await browser.close();
     }
+
   }
 
-  console.log("pubfig errors");
-  console.log(finalInfo.join("\n"));
-  console.log("Scanning Errors");
-  console.log(errorList.join("\n"));
-
-  await browser.close();
+  console.log('scan complete!')
+  console.log('*** HAS TCFAPI ***');
+  console.log(hasTcfApi.join('\n'));
+  console.log('\n\n\n*** HAS CMP ***');
+  console.log(hasCmp.join('\n'));
+  console.log('\n\n\n*** NEITHER ***');
+  console.log(noTcfCmp.join('\n'));
+  console.log('\n\n\n*** ERRORED ***');
+  console.log(errorList.join('\n'));
+  process.exit(1);
   return sites;
 }
+
 
 module.exports = {
   scanPubFig

@@ -27,6 +27,7 @@ function parseCSV(file) {
   const updatedSites = sites.map((site) => {
 
     //if qa append ?fsdebug=true else nothing 
+    //run qa environment MY_ENV=qa node free-crawl.js
     return `https://www.${site}` + (environment == 'qa' ? '?fsdebug=true' : '');
 
   });
