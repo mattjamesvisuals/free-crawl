@@ -1,2 +1,2 @@
 # free-crawl
-crawl sites to check for pubfig 404 error 
+crawl sites to check for TcfApi or CMP
